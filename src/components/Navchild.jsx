@@ -13,7 +13,7 @@ function Navchild(props) {
   };
 
   return (
-    <li className='col-span-1'>
+    <li className="col-span-1">
       <button onClick={handleClick}>{props.icon}</button>
     </li>
   );
