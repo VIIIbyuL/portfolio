@@ -9,21 +9,29 @@ import { ReactComponent as Cellphone } from "../icons/cellphone.svg";
 import { ReactComponent as Location } from "../icons/location.svg";
 
 function Aboutpage() {
-    return (
-        <div>
-          <div>
+  return (
+    <div>
+      <div>
+        <Navbar>
+          <Text></Text>
+          <Navchild
+            function="/home"
+            icon={<Article className="w-10 h-10" />}
+          ></Navchild>
+          <Navchild
+            function="/about"
+            icon={<Cellphone className="w-10 h-10" />}
+          ></Navchild>
+          <Navchild
+            function="/contact"
+            icon={<Location className="w-10 h-10" />}
+          ></Navchild>
+        </Navbar>
+      </div>
 
-            <Navbar>
-              <Text></Text>
-              <Navchild function = "/home" icon={<Article className="w-10 h-10" />}></Navchild>
-              <Navchild function = "/about" icon={<Cellphone className="w-10 h-10" />}></Navchild>
-              <Navchild function = "/contact" icon={<Location className="w-10 h-10" />}></Navchild>
-            </Navbar>
-          </div>
-    
-          <div>ABOUTPAGE</div>
-        </div>
-      );
-    }
+      <div>ABOUTPAGE</div>
+    </div>
+  );
+}
 
 export default Aboutpage;

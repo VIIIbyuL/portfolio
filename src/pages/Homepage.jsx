@@ -1,7 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import React from "react";
 
-
 import Navbar from "../components/Navbar";
 import Navchild from "../components/Navchild";
 import Text from "../components/Text";
@@ -13,12 +12,20 @@ function Homepage() {
   return (
     <div>
       <div>
-
         <Navbar>
           <Text></Text>
-          <Navchild function = "/home" icon={<Article className="w-10 h-10" />}></Navchild>
-          <Navchild function = "/about" icon={<Cellphone className="w-10 h-10" />}></Navchild>
-          <Navchild function = "/contact" icon={<Location className="w-10 h-10" />}></Navchild>
+          <Navchild
+            function="/home"
+            icon={<Article className="w-10 h-10" />}
+          ></Navchild>
+          <Navchild
+            function="/about"
+            icon={<Cellphone className="w-10 h-10" />}
+          ></Navchild>
+          <Navchild
+            function="/contact"
+            icon={<Location className="w-10 h-10" />}
+          ></Navchild>
         </Navbar>
       </div>
 
