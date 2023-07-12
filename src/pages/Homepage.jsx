@@ -6,7 +6,9 @@ function Homepage() {
   return (
     <div>
       <Navigation />
-      <div>HOME PAGE COMPONENTS HERE</div>
+      {/* <div>HOME PAGE COMPONENTS HERE</div> */}
+      
+
     </div>
   );
 }
