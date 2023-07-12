@@ -3,8 +3,8 @@ import React from "react";
 
 function Animation() {
     return (
-        <div className="w-full flex justify-center align-middle">
-            <img src="../images/ghibli.png" alt="image" className="ease-animation" />
+        <div className="mt-10 w-full flex justify-center align-middle">
+            <img src="src/images/ghibli.png" alt="not loading" className="ease-animation w-24 h-24 drop-shadow-lg rounded-full" />
         </div>
     )
 }
