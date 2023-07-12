@@ -3,6 +3,7 @@ import React from "react";
 import Navigation from "../components/Navigation";
 import Animation from "../components/Animation";
 import SkillsBar from "../components/SkillsBar";
+import AutoType from "../components/AutoType";
 
 function Homepage() {
   return (
@@ -10,6 +11,10 @@ function Homepage() {
       <Navigation />
       {/* <div>HOME PAGE COMPONENTS HERE</div> */}
       <Animation />
+
+      {/* AutoType */}
+      <AutoType />
+
       {/* <SkillsBar */}
       <SkillsBar />
     </div>
