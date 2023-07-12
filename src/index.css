@@ -3,7 +3,9 @@
 @tailwind utilities;
 
 .black-page {
-  background: black;
+  background: #222831;
+  color: #EEEEEE;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .ease-animation {

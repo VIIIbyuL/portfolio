@@ -7,7 +7,7 @@ function Animation() {
       <img
         src="src/images/ghibli.png"
         alt="not loading"
-        className="ease-animation w-24 h-24 drop-shadow-lg rounded-full"
+        className="ease-animation w-36 h-36 drop-shadow-lg shadow-white rounded-full"
       />
     </div>
   );
