@@ -7,7 +7,7 @@ import AutoType from "../components/AutoType";
 
 function Homepage() {
   return (
-    <div>
+    <div className="h-full overflow-hidden">
       <Navigation />
       {/* <div>HOME PAGE COMPONENTS HERE</div> */}
       <Animation />
@@ -16,6 +16,7 @@ function Homepage() {
       <AutoType />
 
       {/* <SkillsBar */}
+      
       <SkillsBar />
     </div>
   );

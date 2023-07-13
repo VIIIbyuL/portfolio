@@ -11,7 +11,7 @@ import { ReactComponent as TAILWIND } from "../icons/tailwind.svg";
 
 function SkillsBar() {
   return (
-    <div className="absolute bottom-0 mt-10 bg-[#393E46] h-[250px] w-full flex justify-center">
+    <div className="fixed bottom-0 mt-10 bg-[#393E46] h-[250px] w-full flex justify-center">
       <ul className="grid grid-cols-4 grid-rows-2 w-1/2 mt-5">
         <li className="flex text-center justify-center items-center w-20 h-20">
           <HTML />
