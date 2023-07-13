@@ -5,9 +5,9 @@ import Navbar from "./Navbar";
 import Text from "./Text";
 import Navchild from "./Navchild";
 
-import { ReactComponent as About} from "../icons/about.svg"
-import { ReactComponent as Contact} from "../icons/contact.svg"
-import { ReactComponent as Home} from "../icons/home.svg"
+import { ReactComponent as About } from "../icons/about.svg";
+import { ReactComponent as Contact } from "../icons/contact.svg";
+import { ReactComponent as Home } from "../icons/home.svg";
 
 function Navigation() {
   return (
