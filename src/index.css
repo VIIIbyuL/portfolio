@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .black-page {
-  background: #222831;
+  background: #343434;
   color: #eeeeee;
   font-family: Georgia, "Times New Roman", Times, serif;
 }

@@ -7,7 +7,16 @@ const AutoType = () => {
     <div className="flex justify-center items-center mt-20 p-10 font-extrabold text-8xl">
       <Typewriter
         options={{
-          strings: ["john kim.", "passionate designer."],
+          strings: [
+            "john kim.",
+            "creative mind.",
+            "innovative thinker.",
+            "adaptive problem solver.",
+            "passionate creator.",
+            "detail-oriented.",
+            "collaborative spirit.",
+            "continuous learner.",
+          ],
           autoStart: true,
           loop: true,
           delay: 200,

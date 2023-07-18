@@ -5,7 +5,7 @@ import React from "react";
 function Navbar(props) {
   return (
     <nav>
-      <ul className="grid grid-cols-12 bg-[#00ADB5]">{props.children}</ul>
+      <ul className="grid grid-cols-12 bg-[#1A1A1A]">{props.children}</ul>
     </nav>
   );
 }
