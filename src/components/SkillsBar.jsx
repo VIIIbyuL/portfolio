@@ -11,31 +11,31 @@ import { ReactComponent as TAILWIND } from "../icons/tailwind.svg";
 
 function SkillsBar() {
   return (
-    <div className="fixed bottom-0 h-a mt-10 bg-[#393E46] h-[250px] w-full flex justify-center">
-      <ul className="grid grid-cols-4 grid-rows-2 w-1/2 mt-5">
-        <li className="flex text-center justify-center items-center w-20 h-20">
-          <HTML />
+    <div className="fixed bottom-0 h-1/4 mt-10 bg-[#393E46] w-full flex justify-center items-center">
+      <ul className="grid grid-cols-4 grid-rows-2 w-1/2 mt-5 gap-4">
+        <li className="flex justify-center items-center h-20">
+          <HTML className="h-full w-full" />
         </li>
-        <li className="flex text-center justify-center items-center w-20 h-20">
-          <CSS />
+        <li className="flex justify-center items-center h-20">
+          <CSS className="h-full w-full" />
         </li>
-        <li className="flex text-center justify-center items-center w-20 h-20">
-          <JAVASCRIPT />
+        <li className="flex justify-center items-center h-20">
+          <JAVASCRIPT className="h-full w-full" />
         </li>
-        <li className="flex text-center justify-center items-center w-20 h-20">
-          <JAVA />
+        <li className="flex justify-center items-center h-20">
+          <JAVA className="h-full w-full" />
         </li>
-        <li className="flex text-center justify-center items-center w-20 h-20">
-          <PYTHON />
+        <li className="flex justify-center items-center h-20">
+          <PYTHON className="h-full w-full" />
         </li>
-        <li className="flex text-center justify-center items-center w-20 h-20">
-          <SQL />
+        <li className="flex justify-center items-center h-20">
+          <SQL className="h-full w-full" />
         </li>
-        <li className="flex text-center justify-center items-center w-20 h-20">
-          <REACT />
+        <li className="flex justify-center items-center h-20">
+          <REACT className="h-full w-full" />
         </li>
-        <li className="flex text-center justify-center items-center w-20 h-20">
-          <TAILWIND />
+        <li className="flex justify-center items-center h-20">
+          <TAILWIND className="h-full w-full" />
         </li>
       </ul>
     </div>
