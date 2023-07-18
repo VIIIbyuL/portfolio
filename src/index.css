@@ -35,7 +35,7 @@
 }
 
 .about-background {
-  background-image: url('src/images/howls.jpeg');
+  background-image: url("src/images/spirit.png");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;

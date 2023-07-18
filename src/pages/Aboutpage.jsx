@@ -11,15 +11,15 @@ function Aboutpage() {
 
   const handleComponentDone = () => {
     setComponentDone(true);
-  }
-
+  };
   return (
-    <div className="">
+    <div className="about-background h-screen">
       <Navigation />
+      <div id="particles-js"></div>
 
       {/* Ghibli */}
-      <GhibliText onComponentDone = {handleComponentDone} />
-      <GhibliTier componentDone = { componentDone }/>
+      <GhibliText onComponentDone={handleComponentDone} />
+      <GhibliTier componentDone={componentDone} />
     </div>
   );
 }
