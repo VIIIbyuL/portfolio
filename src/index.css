@@ -20,3 +20,33 @@
     opacity: 1;
   }
 }
+
+.ghibli-animation {
+  animation-duration: 2s;
+  animation-name: ghibli-ease;
+}
+@keyframes ghibli-ease {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.about-background {
+  background-image: url('src/images/howls.jpeg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.title {
+  font-family: "Helvetica", sans-serif;
+  font-size: 48px;
+  font-weight: bold;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  padding: 20px;
+}

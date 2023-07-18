@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 
 /* eslint-disable react/prop-types */
 // eslint-disable-next-line no-unused-vars
@@ -27,14 +28,23 @@ function GhibliText({ onComponentDone }) {
   }, []);
 
   return (
-    <div className="grid grid-cols-2 w-1/2">
+    <div className="flex w-screen  items-center">
       {showGif ? (
-        <img src="src/images/haku-blowing.gif" alt="Animated GIF" />
+        <img className="mt-5" src="src/images/haku-blowing.gif" alt="Animated GIF" />
+      ) : (
+        // <img src = "src/images/haku-last-frame.png"></img>
+        <></>
+      
+      )}
+
+      {showText ? (
+        <div className="ghibli-animation self-center title w-screen flex justify-center items-center text-center mt-5">
+          Reveling in Studio Ghibli's Symphony of Details
+        </div>
       ) : (
         <div></div>
       )}
 
-      {showText ? <div>my love for ghibli</div> : <div></div>}
     </div>
   );
 }

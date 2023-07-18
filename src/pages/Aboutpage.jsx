@@ -14,7 +14,7 @@ function Aboutpage() {
   }
 
   return (
-    <div>
+    <div className="">
       <Navigation />
 
       {/* Ghibli */}
