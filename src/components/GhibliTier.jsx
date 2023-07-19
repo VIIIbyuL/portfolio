@@ -20,32 +20,29 @@ function GhibliTier({ componentDone }) {
     "src/images/howls.png",
     "src/images/howls.png",
     "src/images/spirit.png",
-  ]
+  ];
 
   const [storyIndex, setStoryIndex] = useState(0);
-  const about = document.getElementById('aboutpage');
+  const about = document.getElementById("aboutpage");
 
   const handleClick = () => {
     setStoryIndex((prevIndex) => (prevIndex + 1) % storySections.length);
     console.log(`${storyIndex}`);
-    about.style.backgroundImage = `url(${storyBackgrounds[storyIndex]})`
-
-
-   
+    about.style.backgroundImage = `url(${storyBackgrounds[storyIndex]})`;
   };
 
   return (
     <div className="flex justify-center mt-5">
       {componentDone && (
-        <><div
-          className="p-8 rounded-lg w-1/2"
-        >
-          {storySections[storyIndex]}
-          {storyIndex}
-
-        </div><button onClick={handleClick}>
+        <>
+          <div className="p-8 rounded-lg w-1/2">
+            {storySections[storyIndex]}
+            {storyIndex}
+          </div>
+          <button onClick={handleClick}>
             <RightArrow className="w-24 h-24" />
-          </button></>
+          </button>
+        </>
       )}
     </div>
   );

@@ -5,7 +5,6 @@ import GhibliText from "../components/GhibliText";
 import GhibliTier from "../components/GhibliTier";
 import { useState } from "react";
 
-
 // lets make the about page about my interests
 function Aboutpage() {
   const [componentDone, setComponentDone] = useState(false);
@@ -15,13 +14,13 @@ function Aboutpage() {
   };
   const style = {
     backgroundImage: 'url("src/images/spirit.png")',
-    backgroundRepeat: 'no-repeat',
-    backgroundAttachment: 'fixed',
-    backgroundSize: 'cover'
+    backgroundRepeat: "no-repeat",
+    backgroundAttachment: "fixed",
+    backgroundSize: "cover",
   };
-  
+
   return (
-    <div id = 'aboutpage' style = {style} className="h-screen">
+    <div id="aboutpage" style={style} className="h-screen">
       <Navigation />
 
       {/* Ghibli */}
