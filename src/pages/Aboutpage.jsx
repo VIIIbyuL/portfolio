@@ -5,6 +5,7 @@ import GhibliText from "../components/GhibliText";
 import GhibliTier from "../components/GhibliTier";
 import { useState } from "react";
 
+
 // lets make the about page about my interests
 function Aboutpage() {
   const [componentDone, setComponentDone] = useState(false);
@@ -15,7 +16,6 @@ function Aboutpage() {
   return (
     <div className="about-background h-screen">
       <Navigation />
-      <div id="particles-js"></div>
 
       {/* Ghibli */}
       <GhibliText onComponentDone={handleComponentDone} />
