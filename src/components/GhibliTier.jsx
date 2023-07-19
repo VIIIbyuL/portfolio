@@ -27,7 +27,7 @@ function GhibliTier({ componentDone }) {
       {componentDone && (
         <div className="p-8 bg-gray-500 rounded-lg w-1/2">
           
-          <RenderText index = {storyIndex} />
+          <RenderText index = {storyIndex} text = {storySections[storyIndex]} />
 
           <button onClick={ handleClick }>
             <RightArrow className = 'h-24 w-24' />
