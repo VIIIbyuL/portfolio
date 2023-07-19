@@ -13,8 +13,15 @@ function Aboutpage() {
   const handleComponentDone = () => {
     setComponentDone(true);
   };
+  const style = {
+    backgroundImage: 'url("src/images/spirit.png")',
+    backgroundRepeat: 'no-repeat',
+    backgroundAttachment: 'fixed',
+    backgroundSize: 'cover'
+  };
+  
   return (
-    <div className="about-background h-screen">
+    <div id = 'aboutpage' style = {style} className="h-screen">
       <Navigation />
 
       {/* Ghibli */}

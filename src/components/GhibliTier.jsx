@@ -14,11 +14,23 @@ function GhibliTier({ componentDone }) {
     "Motivated by their mastery of craftsmanship and the power of storytelling, I continue on my coding journey, bringing ideas to life and infusing joy into the digital realm.",
   ];
 
+  const storyBackgrounds = [
+    "src/images/spirit.png",
+    "src/images/ghibli.png",
+    "src/images/howls.png",
+    "src/images/howls.png",
+    "src/images/spirit.png",
+  ]
+
   const [storyIndex, setStoryIndex] = useState(0);
+  const about = document.getElementById('aboutpage');
 
   const handleClick = () => {
     setStoryIndex((prevIndex) => (prevIndex + 1) % storySections.length);
     console.log(`${storyIndex}`);
+    about.style.backgroundImage = `url(${storyBackgrounds[storyIndex]})`
+
+
    
   };
 
@@ -29,6 +41,7 @@ function GhibliTier({ componentDone }) {
           className="p-8 rounded-lg w-1/2"
         >
           {storySections[storyIndex]}
+          {storyIndex}
 
         </div><button onClick={handleClick}>
             <RightArrow className="w-24 h-24" />
