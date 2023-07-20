@@ -70,3 +70,18 @@
     transform: scale(1.2);
   }
 }
+
+:active.nav-bar-click {
+  animation: clicked 125ms ease-in-out;
+  animation-fill-mode: forwards;
+}
+@keyframes clicked {
+  0%{
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
