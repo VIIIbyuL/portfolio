@@ -11,31 +11,31 @@ import { ReactComponent as TAILWIND } from "../icons/tailwind.svg";
 
 function SkillsBar() {
   return (
-    <div className="fixed bottom-0 h-1/4 mt-10 bg-[#222222] w-full flex justify-center items-center">
-      <ul className="grid grid-cols-4 grid-rows-2 w-1/2 mt-5 gap-4">
+    <div className="fixed bottom-0 h-1/4 mt-10  w-full flex justify-center items-center">
+      <ul className="grid grid-cols-4 grid-rows-2 w-1/2 mt-5 gap-2 bg-[#222222] pt-5 pb-5 rounded-full">
         <li className="flex justify-center items-center h-20">
-          <HTML className="h-full w-full" />
+          <HTML className="h-16 w-16 skill-bar-ani" />
         </li>
         <li className="flex justify-center items-center h-20">
-          <CSS className="h-full w-full" />
+          <CSS className="h-16 w-16 skill-bar-ani" />
         </li>
         <li className="flex justify-center items-center h-20">
-          <JAVASCRIPT className="h-full w-full" />
+          <JAVASCRIPT className="h-16 w-16 skill-bar-ani" />
         </li>
         <li className="flex justify-center items-center h-20">
-          <JAVA className="h-full w-full" />
+          <JAVA className="h-16 w-16 skill-bar-ani" />
         </li>
         <li className="flex justify-center items-center h-20">
-          <PYTHON className="h-full w-full" />
+          <PYTHON className="h-16 w-16 skill-bar-ani" />
         </li>
         <li className="flex justify-center items-center h-20">
-          <SQL className="h-full w-full" />
+          <SQL className="h-16 w-16 skill-bar-ani" />
         </li>
         <li className="flex justify-center items-center h-20">
-          <REACT className="h-full w-full" />
+          <REACT className="h-16 w-16 skill-bar-ani" />
         </li>
         <li className="flex justify-center items-center h-20">
-          <TAILWIND className="h-full w-full" />
+          <TAILWIND className="h-16 w-16 skill-bar-ani" />
         </li>
       </ul>
     </div>

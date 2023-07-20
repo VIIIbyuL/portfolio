@@ -2,7 +2,7 @@
 import React from "react";
 
 function Text() {
-  return <div className="col-span-9 flex items-center pl-5">john kim</div>;
+  return <div className="col-span-9 flex items-center pl-10">john kim</div>;
 }
 
 export default Text;

@@ -3,11 +3,11 @@ import React from "react";
 
 function Animation() {
   return (
-    <div className="mt-10 w-full flex justify-center align-middle">
+    <div className="mt-20 w-full flex justify-center align-middle">
       <img
-        src="src/images/ghibli.png"
+        src="src/images/me.png"
         alt="not loading"
-        className="ease-animation w-36 h-36 drop-shadow-lg shadow-white rounded-full"
+        className="ease-animation w-52 h-52 shadow-lg shadow-black rounded-full"
       />
     </div>
   );
