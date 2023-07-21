@@ -15,10 +15,10 @@ function GhibliTier({ componentDone }) {
   ];
 
   const storyBackgrounds = [
-    "src/images/spirit.png",
-    "src/images/ghibli.png",
-    "src/images/howls.png",
-    "src/images/howls.png",
+    "src/images/arriety.png",
+    "src/images/totoro.png",
+    "src/images/howl-bed.png",
+    "src/images/totoro2.png",
     "src/images/spirit.png",
   ];
 
