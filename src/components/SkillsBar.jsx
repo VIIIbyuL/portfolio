@@ -12,30 +12,30 @@ import { ReactComponent as TAILWIND } from "../icons/tailwind.svg";
 function SkillsBar() {
   return (
     <div className="fixed bottom-0 h-1/4 mt-10 w-full flex justify-center items-center">
-      <ul className="grid grid-cols-4 grid-rows-2 lg:w-1/2 md:w-screen mt-5 lg:gap-8 md:gap-2 bg-[#222222] p-10 rounded-full">
+      <ul className="grid grid-cols-4 grid-rows-2 md:w-1/2 w-screen mt-5 md:gap-8  bg-[#222222] p-5 md:p-10 rounded-full">
         <li className="flex justify-center items-center h-20">
-          <HTML className="lg:h-20 lg:w-20 sm:h-10 sm:w-10 skill-bar-ani" />
+          <HTML className="lg:h-20 lg:w-20 h-14 w-14 skill-bar-ani" />
         </li>
         <li className="flex justify-center items-center h-20">
-          <CSS className="lg:h-20 lg:w-20 sm:h-10 sm:w-10 skill-bar-ani" />
+          <CSS className="lg:h-20 lg:w-20 h-14 w-14 skill-bar-ani" />
         </li>
         <li className="flex justify-center items-center h-20">
-          <JAVA className="lg:h-20 lg:w-20 sm:h-10 sm:w-10 skill-bar-ani" />
+          <JAVA className="lg:h-20 lg:w-20 h-14 w-14 skill-bar-ani" />
         </li>
         <li className="flex justify-center items-center h-20">
-          <JAVASCRIPT className="lg:h-20 lg:w-20 sm:h-10 sm:w-10 skill-bar-ani" />
+          <JAVASCRIPT className="lg:h-20 lg:w-20 h-14 w-14 skill-bar-ani" />
         </li>
         <li className="flex justify-center items-center h-20">
-          <PYTHON className="lg:h-20 lg:w-20 sm:h-10 sm:w-10 skill-bar-ani" />
+          <PYTHON className="lg:h-20 lg:w-20 h-14 w-14 skill-bar-ani" />
         </li>
         <li className="flex justify-center items-center h-20">
-          <SQL className="lg:h-20 lg:w-20 sm:h-10 sm:w-10 skill-bar-ani" />
+          <SQL className="lg:h-20 lg:w-20 h-14 w-14 skill-bar-ani" />
         </li>
         <li className="flex justify-center items-center h-20">
-          <REACT className="lg:h-20 lg:w-20 sm:h-10 sm:w-10 skill-bar-ani" />
+          <REACT className="lg:h-20 lg:w-20 h-14 w-14 skill-bar-ani" />
         </li>
         <li className="flex justify-center items-center h-20">
-          <TAILWIND className="lg:h-20 lg:w-20 sm:h-10 sm:w-10 skill-bar-ani" />
+          <TAILWIND className="lg:h-20 lg:w-20 h-14 w-14 skill-bar-ani" />
         </li>
       </ul>
     </div>
