@@ -21,7 +21,7 @@ function Aboutpage() {
 
   // Conditional style to be applied if componentDone is true
   const completedStyle = {
-    backgroundImage: 'url("src/images/spirit.png")'
+    backgroundImage: 'url("src/images/spirit.png")',
   };
 
   const mergedStyle = componentDone ? { ...style, ...completedStyle } : style;
@@ -31,8 +31,11 @@ function Aboutpage() {
       <Navigation />
 
       {/* Ghibli */}
-      <GhibliText className= 'ease-animation' onComponentDone={handleComponentDone} />
-      <GhibliTier className = 'ease-animation' componentDone={componentDone} />
+      <GhibliText
+        className="ease-animation"
+        onComponentDone={handleComponentDone}
+      />
+      <GhibliTier className="ease-animation" componentDone={componentDone} />
     </div>
   );
 }

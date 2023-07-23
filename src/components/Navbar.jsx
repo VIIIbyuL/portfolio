@@ -5,7 +5,7 @@ import React from "react";
 function Navbar(props) {
   return (
     <nav>
-      <ul className="grid grid-cols-12 bg-[#1A1A1A] rounded-br-full rounded-bl-full">
+      <ul className="flex justify-between flex-row bg-[#1A1A1A] rounded-br-full rounded-bl-full shadow-lg">
         {props.children}
       </ul>
     </nav>

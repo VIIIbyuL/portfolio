@@ -4,7 +4,7 @@ import Typewriter from "typewriter-effect";
 
 const AutoType = () => {
   return (
-    <div className="flex justify-center items-center mt-20 p-10 font-extrabold text-8xl">
+    <div className="flex justify-center items-center mt-20 p-10 font-extrabold text-3xl">
       <Typewriter
         options={{
           strings: [
