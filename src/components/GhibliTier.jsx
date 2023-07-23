@@ -35,12 +35,12 @@ function GhibliTier({ componentDone }) {
     <div className="flex justify-center mt-5">
       {componentDone && (
         <>
-          <div className="p-8 rounded-lg w-1/2">
+          <div className="p-8 rounded-lg w-1/2 text-xl flex-wrap shadow-black">
             {storySections[storyIndex]}
-            {storyIndex}
+            
           </div>
           <button onClick={handleClick}>
-            <RightArrow className="w-24 h-24" />
+            <RightArrow className="w-12 h-12 nav-bar-ani nav-bar-click" />
           </button>
         </>
       )}

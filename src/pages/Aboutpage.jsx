@@ -13,19 +13,26 @@ function Aboutpage() {
     setComponentDone(true);
   };
   const style = {
-    backgroundImage: 'url("src/images/spirit.png")',
+    // backgroundImage: 'url("src/images/spirit.png")',
     backgroundRepeat: "no-repeat",
     backgroundAttachment: "fixed",
     backgroundSize: "cover",
   };
 
+  // Conditional style to be applied if componentDone is true
+  const completedStyle = {
+    backgroundImage: 'url("src/images/spirit.png")'
+  };
+
+  const mergedStyle = componentDone ? { ...style, ...completedStyle } : style;
+
   return (
-    <div id="aboutpage" style={style} className="h-screen">
+    <div id="aboutpage" style={mergedStyle} className="h-screen">
       <Navigation />
 
       {/* Ghibli */}
-      <GhibliText onComponentDone={handleComponentDone} />
-      <GhibliTier componentDone={componentDone} />
+      <GhibliText className= 'ease-animation' onComponentDone={handleComponentDone} />
+      <GhibliTier className = 'ease-animation' componentDone={componentDone} />
     </div>
   );
 }

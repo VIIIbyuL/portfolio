@@ -14,7 +14,9 @@ function Navchild(props) {
 
   return (
     <li className="col-span-1">
-      <button onClick={handleClick} className="nav-bar-ani nav-bar-click">{props.icon}</button>
+      <button onClick={handleClick} className="nav-bar-ani nav-bar-click">
+        {props.icon}
+      </button>
     </li>
   );
 }

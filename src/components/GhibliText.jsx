@@ -8,7 +8,7 @@ import { useState, useEffect } from "react";
 
 function GhibliText({ onComponentDone }) {
   const simulateAsyncOperation = async () => {
-    await new Promise((resolve) => setTimeout(resolve, 2000)); // Simulating a 2-second delay
+    await new Promise((resolve) => setTimeout(resolve, 500)); 
     onComponentDone();
   };
 
@@ -20,7 +20,7 @@ function GhibliText({ onComponentDone }) {
       setShowGif(false);
       setShowText(true);
       simulateAsyncOperation();
-    }, 2100); // Delay of 5000 milliseconds (5 seconds)
+    }, 2000); // Delay of 5000 milliseconds (5 seconds)
 
     return () => {
       clearTimeout(timer); // Cleanup: Clear the timeout if the component unmounts before the GIF ends
@@ -28,7 +28,7 @@ function GhibliText({ onComponentDone }) {
   }, [simulateAsyncOperation]);
 
   return (
-    <div className="flex w-screen  items-center">
+    <div className="flex w-screen items-center justify-center ease-animation">
       {showGif ? (
         <img
           className="mt-5"
@@ -42,7 +42,7 @@ function GhibliText({ onComponentDone }) {
 
       {showText ? (
         <div className="ghibli-animation self-center title w-screen flex justify-center items-center text-center mt-5">
-          Reveling in Studio Ghibli's Symphony of Details
+          {/* Reveling in Studio Ghibli's Symphony of Details */}
         </div>
       ) : (
         <div></div>
