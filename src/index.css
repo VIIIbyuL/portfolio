@@ -84,3 +84,9 @@
     transform: scale(1);
   }
 }
+
+@media (max-width: 768px) {
+  #image {
+    background-size: contain; /* You can adjust this value based on your preference */
+  }
+}

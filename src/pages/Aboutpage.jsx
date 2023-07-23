@@ -14,9 +14,10 @@ function Aboutpage() {
   };
   const style = {
     // backgroundImage: 'url("src/images/spirit.png")',
+    backgroundPosition: "center center",
     backgroundRepeat: "no-repeat",
     backgroundAttachment: "fixed",
-    backgroundSize: "cover",
+    backgroundSize: "cover"
   };
 
   // Conditional style to be applied if componentDone is true
