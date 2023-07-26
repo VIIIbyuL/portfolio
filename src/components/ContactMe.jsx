@@ -3,12 +3,13 @@
 import React from "react";
 import { ReactComponent as Github } from "../icons/github.svg";
 import { ReactComponent as LinkedIn } from "../icons/linkedin.svg";
+import {ReactComponent as Email} from "../icons/email.svg";
 
 function ContactMe() {
   return (
     <div className="h-screen w-screen flex items-center justify-center">
-      <div className="bg-[#1A1A1A] overflow-scroll w-3/4 h-1/2 p-5 rounded-lg">
-        <div className="w-full mt-5">
+      <div className="bg-[#1A1A1A] overflow-scroll w-7/12 h-1/2 p-5 rounded-lg">
+        <div className="w-full mt-10">
           As a rising junior at Boston University, studying computer science,
           I'm passionate about exploring the world of technology. I love coding
           and solving complex challenges. Check out some of my projects on
@@ -26,7 +27,7 @@ function ContactMe() {
           learn and grow. Feel free to connect with me:
         </div>
 
-        <ul className="flex flex-row mt-5 mb-5 justify-evenly ">
+        <ul className="flex flex-row mt-5  justify-evenly ">
           <li>
             <a
               href="https://github.com/VIIIbyuL"
@@ -46,7 +47,13 @@ function ContactMe() {
               <LinkedIn className="h-12 w-12" />
             </a>
           </li>
-          <li>Email</li>
+          <li>
+            <a href="mailto: myjjk03@gmail.com"
+                target = "_blank"
+                rel= "noreferrer">
+                    <Email className="h-12 w-12"/>
+            </a>
+          </li>
         </ul>
       </div>
     </div>
