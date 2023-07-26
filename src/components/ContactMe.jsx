@@ -2,12 +2,12 @@
 // eslint-disable-next-line no-unused-vars
 import React from "react";
 import { ReactComponent as Github } from "../icons/github.svg";
-import {ReactComponent as LinkedIn} from "../icons/linkedin.svg"
+import { ReactComponent as LinkedIn } from "../icons/linkedin.svg";
 
 function ContactMe() {
   return (
     <div className="h-screen w-screen flex items-center justify-center">
-      <div className="bg-[#1A1A1A] overflow-auto w-1/2 h-1/2 text-center p-5 rounded-lg">
+      <div className="bg-[#1A1A1A] overflow-scroll w-3/4 h-1/2 p-5 rounded-lg">
         <div className="w-full mt-5">
           As a rising junior at Boston University, studying computer science,
           I'm passionate about exploring the world of technology. I love coding
@@ -28,14 +28,22 @@ function ContactMe() {
 
         <ul className="flex flex-row mt-5 mb-5 justify-evenly ">
           <li>
-            <a href="https://github.com/VIIIbyuL" target="_blank" rel="noreferrer">
+            <a
+              href="https://github.com/VIIIbyuL"
+              target="_blank"
+              rel="noreferrer"
+            >
               <Github className="h-12 w-12" />
             </a>
           </li>
 
           <li>
-            <a href="https://www.linkedin.com/in/john-kim-b04807264/" target="_blank" rel="noreferrer">
-                <LinkedIn className="h-12 w-12" />
+            <a
+              href="https://www.linkedin.com/in/john-kim-b04807264/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <LinkedIn className="h-12 w-12" />
             </a>
           </li>
           <li>Email</li>
