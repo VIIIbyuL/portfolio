@@ -56,7 +56,7 @@ function Homepage() {
                 quantity: 4,
               },
               repulse: {
-                distance: 50,
+                distance: 100,
                 duration: 0.4,
               },
             },
@@ -87,7 +87,7 @@ function Homepage() {
                 enable: true,
                 area: 800,
               },
-              value: 100,
+              value: 150,
             },
             opacity: {
               value: 0.5,

@@ -17,7 +17,7 @@ function Aboutpage() {
     backgroundPosition: "center center",
     backgroundRepeat: "no-repeat",
     backgroundAttachment: "fixed",
-    backgroundSize: "cover"
+    backgroundSize: "cover",
   };
 
   // Conditional style to be applied if componentDone is true
