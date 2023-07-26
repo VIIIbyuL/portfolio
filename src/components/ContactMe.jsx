@@ -7,7 +7,7 @@ import {ReactComponent as LinkedIn} from "../icons/linkedin.svg"
 function ContactMe() {
   return (
     <div className="h-screen w-screen flex items-center justify-center">
-      <div className="bg-[#1A1A1A]  w-1/2 h-1/2 text-center p-5 rounded-lg">
+      <div className="bg-[#1A1A1A] overflow-auto w-1/2 h-1/2 text-center p-5 rounded-lg">
         <div className="w-full mt-5">
           As a rising junior at Boston University, studying computer science,
           I'm passionate about exploring the world of technology. I love coding
