@@ -1,9 +1,16 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable react/prop-types */
 // eslint-disable-next-line no-unused-vars
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import { ReactComponent as RightArrow } from "../icons/right-arrow.svg";
+
+import arrietyImage from "../images/arriety.png";
+import totoroImage from "../images/totoro.png";
+import howlBedImage from "../images/howl-bed.png";
+import windRisesImage from "../images/wind-rises.png";
+import spiritImage from "../images/spirit.png";
+
 
 function GhibliTier({ componentDone }) {
   const storySections = [
@@ -15,26 +22,39 @@ function GhibliTier({ componentDone }) {
   ];
 
   const storyBackgrounds = [
-    "src/images/arriety.png",
-    "src/images/totoro.png",
-    "src/images/howl-bed.png",
-    "src/images/wind-rises.png",
-    "src/images/spirit.png",
+    arrietyImage,
+    totoroImage,
+    howlBedImage,
+    windRisesImage,
+    spiritImage,
   ];
+  
 
   const [storyIndex, setStoryIndex] = useState(0);
   const about = document.getElementById("aboutpage");
 
   const handleClick = () => {
-    setStoryIndex((prevIndex) => (prevIndex + 1) % storySections.length);
-    console.log(`${storyIndex}`);
+    
+    
     about.style.backgroundImage = `url(${storyBackgrounds[storyIndex]})`;
+    setStoryIndex((prevIndex) => (prevIndex + 1) % storySections.length);
   };
+
+  useEffect(() => {
+    if (componentDone) {
+      // Set the background image on the first rendering of componentDone
+      const about = document.getElementById("aboutpage");
+      about.style.backgroundImage = `url(${spiritImage})`;
+    }
+  }, [componentDone]);
+    
+
 
   return (
     <div className="flex justify-center mt-5">
       {componentDone && (
         <div className="bg-[#1A1A1A] grid grid-cols-4 max-w-2xl rounded-full shadow-lg shadow-black">
+         
           <div className="col-span-3 p-8 rounded-lg w-full h-full text-xs md:text-xl flex-wrap shadow-black">
             {storySections[storyIndex]}
           </div>

@@ -6,6 +6,9 @@
 import React from "react";
 import { useState, useEffect } from "react";
 
+import hakuGif from "../images/haku-blowing.gif"
+
+
 function GhibliText({ onComponentDone }) {
   const simulateAsyncOperation = async () => {
     await new Promise((resolve) => setTimeout(resolve, 500));
@@ -32,7 +35,7 @@ function GhibliText({ onComponentDone }) {
       {showGif ? (
         <img
           className="mt-5"
-          src="../src/images/haku-blowing.gif"
+          src={hakuGif}
           alt="Animated GIF"
         />
       ) : (
