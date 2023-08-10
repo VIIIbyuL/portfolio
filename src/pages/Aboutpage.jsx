@@ -3,6 +3,7 @@ import React from "react";
 import Navigation from "../components/Navigation";
 import GhibliText from "../components/GhibliText";
 import GhibliTier from "../components/GhibliTier";
+import PreLoad from "../components/PreLoad";
 import { useState } from "react";
 
 // lets make the about page about my interests
@@ -30,6 +31,7 @@ function Aboutpage() {
   return (
     <div id="aboutpage" style={mergedStyle} className="h-screen">
       <Navigation />
+      <PreLoad />
 
       {/* Ghibli */}
       <GhibliText

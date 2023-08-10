@@ -90,19 +90,3 @@
     background-size: contain; /* You can adjust this value based on your preference */
   }
 }
-
-
-#aboutpage {
-  display: none;
-  background-image: url("../images/arriety.png");
-  background-image: url("../images/totoro.png");
-  background-image: url("../images/howl-bed.png");
-  background-image: url("../images/wind-rises.png");
-  background-image: url("../images/spirit.png");
-
-  /* import arrietyImage from "../images/arriety.png";
-import totoroImage from "../images/totoro.png";
-import howlBedImage from "../images/howl-bed.png";
-import windRisesImage from "../images/wind-rises.png";
-import spiritImage from "../images/spirit.png"; */
-}

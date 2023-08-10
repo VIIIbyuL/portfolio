@@ -11,7 +11,6 @@ import howlBedImage from "../images/howl-bed.png";
 import windRisesImage from "../images/wind-rises.png";
 import spiritImage from "../images/spirit.png";
 
-
 function GhibliTier({ componentDone }) {
   const storySections = [
     "In the serene suburbs of New York, amidst lush greenery and tranquility, I embarked on a coding journey inspired by Studio Ghibli.",
@@ -28,14 +27,11 @@ function GhibliTier({ componentDone }) {
     windRisesImage,
     spiritImage,
   ];
-  
 
   const [storyIndex, setStoryIndex] = useState(0);
   const about = document.getElementById("aboutpage");
 
   const handleClick = () => {
-    
-    
     about.style.backgroundImage = `url(${storyBackgrounds[storyIndex]})`;
     setStoryIndex((prevIndex) => (prevIndex + 1) % storySections.length);
   };
@@ -47,14 +43,11 @@ function GhibliTier({ componentDone }) {
       about.style.backgroundImage = `url(${spiritImage})`;
     }
   }, [componentDone]);
-    
-
 
   return (
     <div className="flex justify-center mt-5">
       {componentDone && (
         <div className="bg-[#1A1A1A] grid grid-cols-4 max-w-2xl rounded-full shadow-lg shadow-black">
-         
           <div className="col-span-3 p-8 rounded-lg w-full h-full text-xs md:text-xl flex-wrap shadow-black">
             {storySections[storyIndex]}
           </div>

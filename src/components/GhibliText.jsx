@@ -6,8 +6,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 
-import hakuGif from "../images/haku-blowing.gif"
-
+import hakuGif from "../images/haku-blowing.gif";
 
 function GhibliText({ onComponentDone }) {
   const simulateAsyncOperation = async () => {
@@ -33,11 +32,7 @@ function GhibliText({ onComponentDone }) {
   return (
     <div className="flex w-screen items-center justify-center ease-animation">
       {showGif ? (
-        <img
-          className="mt-5"
-          src={hakuGif}
-          alt="Animated GIF"
-        />
+        <img className="mt-5" src={hakuGif} alt="Animated GIF" />
       ) : (
         // <img src = "src/images/haku-last-frame.png"></img>
         <></>
