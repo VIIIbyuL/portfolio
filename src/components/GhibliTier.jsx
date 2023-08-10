@@ -34,7 +34,7 @@ function GhibliTier({ componentDone }) {
   return (
     <div className="flex justify-center mt-5">
       {componentDone && (
-        <div className="bg-[#1A1A1A] grid grid-cols-4 max-w-2xl rounded-full shadow-2xl">
+        <div className="bg-[#1A1A1A] grid grid-cols-4 max-w-2xl rounded-full shadow-lg shadow-black">
           <div className="col-span-3 p-8 rounded-lg w-full h-full text-xs md:text-xl flex-wrap shadow-black">
             {storySections[storyIndex]}
           </div>

@@ -3,12 +3,12 @@
 import React from "react";
 import { ReactComponent as Github } from "../icons/github.svg";
 import { ReactComponent as LinkedIn } from "../icons/linkedin.svg";
-import {ReactComponent as Email} from "../icons/email.svg";
+import { ReactComponent as Email } from "../icons/email.svg";
 
 function ContactMe() {
   return (
     <div className="h-screen w-screen flex items-center justify-center">
-      <div className="bg-[#1A1A1A] overflow-scroll w-7/12 h-1/2 p-5 rounded-lg text-center">
+      <div className="bg-[#1A1A1A] overflow-scroll w-7/12 h-1/2 p-5 rounded-lg text-center shadow-lg shadow-black">
         <div className="w-full mt-10">
           As a rising junior at Boston University, studying computer science,
           I'm passionate about exploring the world of technology. I love coding
@@ -48,10 +48,12 @@ function ContactMe() {
             </a>
           </li>
           <li>
-            <a href="mailto: myjjk03@gmail.com"
-                target = "_blank"
-                rel= "noreferrer">
-                    <Email className="h-12 w-12"/>
+            <a
+              href="mailto: myjjk03@gmail.com"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <Email className="h-12 w-12" />
             </a>
           </li>
         </ul>
