@@ -17,9 +17,9 @@ function ContactMe() {
         </div>
 
         <ul className="flex flex-row mt-10 justify-evenly ">
-          <li>icon1</li>
-          <li>icon2</li>
-          <li>icon3</li>
+          <li className="nav-bar-ani nav-bar-click">icon1</li>
+          <li className="nav-bar-ani nav-bar-click">icon2</li>
+          <li className="nav-bar-ani nav-bar-click">icon3</li>
         </ul>
 
         <div className="w-full mt-10">
@@ -34,7 +34,7 @@ function ContactMe() {
               target="_blank"
               rel="noreferrer"
             >
-              <Github className="h-12 w-12" />
+              <Github className="h-12 w-12 nav-bar-ani nav-bar-click" />
             </a>
           </li>
 
@@ -44,7 +44,7 @@ function ContactMe() {
               target="_blank"
               rel="noreferrer"
             >
-              <LinkedIn className="h-12 w-12" />
+              <LinkedIn className="h-12 w-12 nav-bar-ani nav-bar-click" />
             </a>
           </li>
           <li>
@@ -53,7 +53,7 @@ function ContactMe() {
               target="_blank"
               rel="noreferrer"
             >
-              <Email className="h-12 w-12" />
+              <Email className="h-12 w-12 nav-bar-ani nav-bar-click" />
             </a>
           </li>
         </ul>
