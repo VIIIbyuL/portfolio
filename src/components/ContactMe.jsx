@@ -8,7 +8,7 @@ import {ReactComponent as Email} from "../icons/email.svg";
 function ContactMe() {
   return (
     <div className="h-screen w-screen flex items-center justify-center">
-      <div className="bg-[#1A1A1A] overflow-scroll w-7/12 h-1/2 p-5 rounded-lg">
+      <div className="bg-[#1A1A1A] overflow-scroll w-7/12 h-1/2 p-5 rounded-lg text-center">
         <div className="w-full mt-10">
           As a rising junior at Boston University, studying computer science,
           I'm passionate about exploring the world of technology. I love coding

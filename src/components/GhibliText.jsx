@@ -32,7 +32,7 @@ function GhibliText({ onComponentDone }) {
       {showGif ? (
         <img
           className="mt-5"
-          src="src/images/haku-blowing.gif"
+          src="../src/images/haku-blowing.gif"
           alt="Animated GIF"
         />
       ) : (
