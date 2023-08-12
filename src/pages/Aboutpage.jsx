@@ -29,17 +29,17 @@ function Aboutpage() {
   const mergedStyle = componentDone ? { ...style, ...completedStyle } : style;
 
   return (
+    <><Navigation />
     <div id="aboutpage" style={mergedStyle} className="h-screen">
-      <Navigation />
+      
       <PreLoad />
 
       {/* Ghibli */}
       <GhibliText
         className="ease-animation"
-        onComponentDone={handleComponentDone}
-      />
+        onComponentDone={handleComponentDone} />
       <GhibliTier className="ease-animation" componentDone={componentDone} />
-    </div>
+    </div></>
   );
 }
 
