@@ -3,7 +3,7 @@ import React from "react";
 import Navigation from "../components/Navigation";
 import GhibliText from "../components/GhibliText";
 import GhibliTier from "../components/GhibliTier";
-import PreLoad from "../components/PreLoad";
+
 import { useState } from "react";
 
 // lets make the about page about my interests
@@ -21,18 +21,11 @@ function Aboutpage() {
     backgroundSize: "cover",
   };
 
-  // Conditional style to be applied if componentDone is true
-  const completedStyle = {
-    backgroundImage: 'url("src/images/spirit.png")',
-  };
-
-  const mergedStyle = componentDone ? { ...style, ...completedStyle } : style;
-
   return (
     <><Navigation />
-    <div id="aboutpage" style={mergedStyle} className="h-screen">
+    <div id="aboutpage" style={style} className="h-screen">
       
-      <PreLoad />
+ 
 
       {/* Ghibli */}
       <GhibliText

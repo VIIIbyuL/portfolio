@@ -9,8 +9,7 @@ import { useState, useEffect } from "react";
 import hakuGif from "../images/haku-blowing.gif";
 
 function GhibliText({ onComponentDone }) {
-  const simulateAsyncOperation = async () => {
-    await new Promise((resolve) => setTimeout(resolve, 500));
+  const simulateOperation = () => {
     onComponentDone();
   };
 
@@ -21,13 +20,13 @@ function GhibliText({ onComponentDone }) {
     const timer = setTimeout(() => {
       setShowGif(false);
       setShowText(true);
-      simulateAsyncOperation();
+      simulateOperation();
     }, 2000); // Delay of 5000 milliseconds (5 seconds)
 
     return () => {
       clearTimeout(timer); // Cleanup: Clear the timeout if the component unmounts before the GIF ends
     };
-  }, [simulateAsyncOperation]);
+  }, [simulateOperation]);
 
   return (
     <div className="flex w-screen items-center justify-center ease-animation">

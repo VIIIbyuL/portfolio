@@ -13,10 +13,10 @@ import spiritImage from "../images/spirit-min.jpg";
 
 function GhibliTier({ componentDone }) {
   const storySections = [
-    "In the serene suburbs of New York, amidst lush greenery and tranquility, I embarked on a coding journey inspired by Studio Ghibli.",
-    "Like the enchanting tales crafted by Hayao Miyazaki and his team, coding captivated my imagination with its limitless possibilities.",
-    "The attention to detail and artistry in Studio Ghibli's animations inspired me to strive for excellence in my coding endeavors.",
-    "Just as Studio Ghibli effortlessly transported me to magical realms, coding allowed me to create digital wonders and explore profound concepts.",
+    "In the serene suburbs of New York, amidst lush greenery and tranquility, I embarked on a coding journey inspired by Studio Ghibli...",
+    "Like the enchanting tales crafted by Hayao Miyazaki and his team, coding captivated my imagination with its limitless possibilities...",
+    "The attention to detail and artistry in Studio Ghibli's animations inspired me to strive for excellence in my coding endeavors...",
+    "Just as Studio Ghibli effortlessly transported me to magical realms, coding allowed me to create digital wonders and explore profound concepts...",
     "Motivated by their mastery of craftsmanship, I continued on my coding journey, bringing ideas to life in the digital realm. ",
   ];
 
@@ -58,9 +58,10 @@ function GhibliTier({ componentDone }) {
 
   useEffect(() => {
     if (componentDone) {
-      // Set the background image on the first rendering of componentDone
+  
       const about = document.getElementById("aboutpage");
       about.style.backgroundImage = `url(${spiritImage})`;
+
     }
   }, [componentDone]);
 

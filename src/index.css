@@ -92,9 +92,4 @@
 }
 
 
-#about-page {
-  width: 100vw;
-  height: 100vh;
-  background: transparent; /* Start with a transparent background */
-  transition: background 1s ease; /* Apply a transition to the background property */
-}
+
