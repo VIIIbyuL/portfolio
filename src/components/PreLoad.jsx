@@ -23,12 +23,12 @@ function PreLoad() {
 
     return () => {
       preloadedImages.forEach((img) => {
-        img.src = ""; 
+        img.src = "";
       });
     };
   }, []);
 
-  return null; 
+  return null;
 }
 
 export default PreLoad;

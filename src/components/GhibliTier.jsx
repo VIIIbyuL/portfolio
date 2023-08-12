@@ -28,12 +28,18 @@ function GhibliTier({ componentDone }) {
     spiritImage,
   ];
 
+  const [isChange, setIsChange] = useState(false);
+
   const [storyIndex, setStoryIndex] = useState(0);
   const about = document.getElementById("aboutpage");
 
   const handleClick = () => {
+    setIsChange(true);
     about.style.backgroundImage = `url(${storyBackgrounds[storyIndex]})`;
     setStoryIndex((prevIndex) => (prevIndex + 1) % storySections.length);
+    setTimeout(() => {
+      setIsChange(false);
+    }, 500);
   };
 
   useEffect(() => {
@@ -46,19 +52,22 @@ function GhibliTier({ componentDone }) {
 
   return (
     <div className="flex justify-center mt-5">
-      {componentDone && (
-        <div className="bg-[#1A1A1A] grid grid-cols-4 max-w-2xl rounded-full shadow-lg shadow-black">
-          <div className="col-span-3 p-8 rounded-lg w-full h-full text-xs md:text-xl flex-wrap shadow-black">
-            {storySections[storyIndex]}
+      {componentDone &&
+        (isChange ? (
+          <div className="loader"></div>
+        ) : (
+          <div className="bg-[#1A1A1A] grid grid-cols-4 max-w-2xl rounded-full shadow-lg shadow-black">
+            <div className="col-span-3 p-8 rounded-lg w-full h-full text-xs md:text-xl flex-wrap shadow-black">
+              {storySections[storyIndex]}
+            </div>
+            <button
+              className="col-span-1 flex items-center justify-center"
+              onClick={handleClick}
+            >
+              <RightArrow className="w-12 h-12 nav-bar-ani nav-bar-click" />
+            </button>
           </div>
-          <button
-            className="col-span-1 flex items-center justify-center"
-            onClick={handleClick}
-          >
-            <RightArrow className="w-12 h-12 nav-bar-ani nav-bar-click" />
-          </button>
-        </div>
-      )}
+        ))}
     </div>
   );
 }
