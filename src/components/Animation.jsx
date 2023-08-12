@@ -1,6 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import React from "react";
-import imgMe from "../images/me.png";
+import imgMe from "../images/me.jpg";
 
 function Animation() {
   return (

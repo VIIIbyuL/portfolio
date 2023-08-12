@@ -5,11 +5,11 @@ import React, { useEffect, useState } from "react";
 
 import { ReactComponent as RightArrow } from "../icons/right-arrow.svg";
 
-import arrietyImage from "../images/arriety.png";
-import totoroImage from "../images/totoro.png";
-import howlBedImage from "../images/howl-bed.png";
-import windRisesImage from "../images/wind-rises.png";
-import spiritImage from "../images/spirit.png";
+import arrietyImage from "../images/arriety.jpg";
+import totoroImage from "../images/totoro.jpg";
+import howlBedImage from "../images/howl-bed.jpg";
+import windRisesImage from "../images/wind-rises.jpg";
+import spiritImage from "../images/spirit.jpg";
 
 function GhibliTier({ componentDone }) {
   const storySections = [
