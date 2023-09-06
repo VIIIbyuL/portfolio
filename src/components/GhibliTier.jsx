@@ -35,33 +35,30 @@ function GhibliTier({ componentDone }) {
 
   const handleClick = () => {
     setIsChange(true);
-  
+
     // Set opacity to 0 with a transition
     about.style.transition = "opacity 0.5s"; // Apply a transition for opacity change
     about.style.opacity = 0;
-  
+
     // Delay to allow the opacity transition to take effect
     setTimeout(() => {
       // Update the background image
       about.style.backgroundImage = `url(${storyBackgrounds[storyIndex]})`;
-  
+
       // Reset the transition property and set opacity back to 1
       about.style.transition = ""; // Reset transition property
-      about.style.opacity = 1;     // Set opacity back to 1
-  
+      about.style.opacity = 1; // Set opacity back to 1
+
       // Update story index and loading state
       setStoryIndex((prevIndex) => (prevIndex + 1) % storySections.length);
       setIsChange(false);
     }, 500);
   };
-  
 
   useEffect(() => {
     if (componentDone) {
-  
       const about = document.getElementById("aboutpage");
       about.style.backgroundImage = `url(${spiritImage})`;
-
     }
   }, [componentDone]);
 

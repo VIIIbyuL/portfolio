@@ -22,17 +22,17 @@ function Aboutpage() {
   };
 
   return (
-    <><Navigation />
-    <div id="aboutpage" style={style} className="h-screen">
-      
- 
-
-      {/* Ghibli */}
-      <GhibliText
-        className="ease-animation"
-        onComponentDone={handleComponentDone} />
-      <GhibliTier className="ease-animation" componentDone={componentDone} />
-    </div></>
+    <>
+      <Navigation />
+      <div id="aboutpage" style={style} className="h-screen">
+        {/* Ghibli */}
+        <GhibliText
+          className="ease-animation"
+          onComponentDone={handleComponentDone}
+        />
+        <GhibliTier className="ease-animation" componentDone={componentDone} />
+      </div>
+    </>
   );
 }
 

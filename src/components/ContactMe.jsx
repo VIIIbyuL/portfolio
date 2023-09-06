@@ -8,23 +8,12 @@ import { ReactComponent as Email } from "../icons/email.svg";
 function ContactMe() {
   return (
     <div className="h-screen w-screen flex items-center justify-center">
-      <div className="bg-[#1A1A1A] overflow-scroll w-7/12 h-1/2 p-5 rounded-lg text-center shadow-lg shadow-black">
-        <div className="w-full mt-10">
+      <div className="bg-[#1A1A1A] w-7/12 p-5 rounded-lg text-center shadow-lg shadow-black">
+        <div>
           As a rising junior at Boston University, studying computer science,
           I'm passionate about exploring the world of technology. I love coding
           and solving complex challenges. Check out some of my projects on
-          GitHub:
-        </div>
-
-        <ul className="flex flex-row mt-10 justify-evenly ">
-          <li className="nav-bar-ani nav-bar-click">icon1</li>
-          <li className="nav-bar-ani nav-bar-click">icon2</li>
-          <li className="nav-bar-ani nav-bar-click">icon3</li>
-        </ul>
-
-        <div className="w-full mt-10">
-          I'm open to collaborations and always seeking new opportunities to
-          learn and grow. Feel free to connect with me:
+          GitHub and feel free to connect with me:
         </div>
 
         <ul className="flex flex-row mt-5  justify-evenly ">
