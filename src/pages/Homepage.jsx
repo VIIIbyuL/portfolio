@@ -6,6 +6,7 @@ import SkillsBar from "../components/SkillsBar";
 import AutoType from "../components/AutoType";
 import { loadSlim } from "tsparticles-slim"; // Import the loadSlim function
 import ContactMe from "../components/ContactMe";
+import ThreeModelViewer from "../components/threeModelViewer";
 
 function Homepage() {
   const particlesInit = useCallback(async (tsParticles) => {
@@ -26,100 +27,143 @@ function Homepage() {
   }, [particlesInit]);
 
   const options = {
-    background: {
-      color: {
-        value: "#343434",
-      },
-      fullScreen: {
-        enable: false,
-        zIndex: -1,
-      },
-      style: {
-        position: "absolute",
-        height: "100%",
-        top: "0",
-        left: "0",
-      },
-    },
-    fpsLimit: 120,
-    interactivity: {
-      detectsOn: "window",
-      modes: {
-        push: {
-          quantity: 4,
-        },
-        repulse: {
-          distance: 100,
-          duration: 0.4,
-        },
-      },
-    },
     particles: {
-      color: {
-        value: "#ffffff",
-      },
-
-      links: {
-        color: "#ffffff",
-        distance: 150,
-        enable: true,
-        opacity: 0.5,
-        width: 1,
-      },
-      move: {
-        direction: "none",
-        enable: true,
-        outModes: {
-          default: "bounce",
-        },
-        random: true,
-        speed: 3,
-        straight: false,
-      },
       number: {
+        value: 100,
         density: {
           enable: true,
-          area: 800,
+          value_area: 631.3280775270874,
         },
-        value: 150,
       },
-      opacity: {
-        value: 0.5,
+      color: {
+        value: "#fff",
       },
       shape: {
         type: "circle",
+        stroke: {
+          width: 0,
+          color: "#000000",
+        },
+        polygon: {
+          nb_sides: 5,
+        },
+        image: {
+          src: "img/github.svg",
+          width: 100,
+          height: 100,
+        },
+      },
+      opacity: {
+        value: 0.5,
+        random: true,
+        anim: {
+          enable: false,
+          speed: 1,
+          opacity_min: 0.1,
+          sync: false,
+        },
       },
       size: {
-        value: { min: 1, max: 5 },
+        value: 5,
+        random: true,
+        anim: {
+          enable: false,
+          speed: 40,
+          size_min: 0.1,
+          sync: false,
+        },
+      },
+      line_linked: {
+        enable: false,
+        distance: 500,
+        color: "#ffffff",
+        opacity: 0.4,
+        width: 2,
+      },
+      move: {
+        enable: true,
+        speed: 1.5,
+        direction: "bottom",
+        random: false,
+        straight: false,
+        out_mode: "out",
+        bounce: false,
+        attract: {
+          enable: false,
+          rotateX: 600,
+          rotateY: 1200,
+        },
       },
     },
-    detectRetina: true,
-    particlesContainer: {
-      // Set the height of the particles container here to match your desired section's height
-      height: "100vh", // Change this value to your desired height
+    interactivity: {
+      detect_on: "canvas",
+      events: {
+        onhover: {
+          enable: false,
+          mode: "bubble",
+        },
+        onclick: {
+          enable: true,
+          mode: "repulse",
+        },
+        resize: true,
+      },
+      modes: {
+        grab: {
+          distance: 400,
+          line_linked: {
+            opacity: 0.5,
+          },
+        },
+        bubble: {
+          distance: 400,
+          size: 4,
+          duration: 0.3,
+          opacity: 1,
+          speed: 3,
+        },
+        repulse: {
+          distance: 200,
+          duration: 0.4,
+        },
+        push: {
+          particles_nb: 4,
+        },
+        remove: {
+          particles_nb: 2,
+        },
+      },
     },
+    retina_detect: true,
   };
 
   return (
     <div className="scroll-container">
-      {/* Particle Effect */}
-
       {/* Navigation */}
-      <div className="scroll-area flex items-center justify-center flex-col">
-        
-          <Animation />
-          <AutoType />
-          <SkillsBar />
-        
+      <div className="scroll-area relative flex items-center justify-center flex-col">
+        {/* Particle Effect */}
+        <div className="absolute top-0 left-0 w-full h-full z-[-1] pointer-events-none">
+          <Particles
+            id="tsparticles"
+            init={particlesInit}
+            loaded={particlesLoaded}
+            options={options}
+          />
+        </div>
+
+        <Animation />
+        <AutoType />
+        <SkillsBar />
       </div>
 
-      <div className="scroll-area">testing</div>
+      <div className="scroll-area">
+        <ThreeModelViewer />
+      </div>
 
       {/* Content */}
-      <div className="scroll-area">
+      <div className="scroll-area bg-gray-400">
         {/* Add more content here to enable scrolling */}
         <ContactMe />
-
       </div>
     </div>
   );

@@ -142,7 +142,7 @@ function Contactpage() {
         options={options}
         className="absolute top-0 left-0 w-full h-full z-0 pointer-events-none"
       />
-      <div className="relative z-10">
+      <div className="relative z-[-1]">
         <Navigation />
 
         {/* ContactMe */}
