@@ -7,7 +7,7 @@ import { ReactComponent as Email } from "../icons/email.svg";
 
 function ContactMe() {
   return (
-    <div className="h-screen w-screen flex items-center justify-center">
+    <div className="flex items-center justify-center">
       <div className="bg-[#1A1A1A] w-7/12 p-5 rounded-lg text-center shadow-lg shadow-black">
         <div>
           As a rising junior at Boston University, studying computer science,

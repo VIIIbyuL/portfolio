@@ -36,7 +36,7 @@ function Homepage() {
         },
       },
       color: {
-        value: "#fff",
+        value: "#900",
       },
       shape: {
         type: "circle",
@@ -54,7 +54,7 @@ function Homepage() {
         },
       },
       opacity: {
-        value: 0.5,
+        value: 1,
         random: true,
         anim: {
           enable: false,
@@ -137,12 +137,13 @@ function Homepage() {
     retina_detect: true,
   };
 
+
   return (
     <div className="scroll-container">
       {/* Navigation */}
       <div className="scroll-area relative flex items-center justify-center flex-col">
         {/* Particle Effect */}
-        <div className="absolute top-0 left-0 w-full h-full z-[-1] pointer-events-none">
+        <div className="absolute top-0 left-0 w-full h-full z-[-1]">
           <Particles
             id="tsparticles"
             init={particlesInit}
@@ -157,13 +158,15 @@ function Homepage() {
       </div>
 
       <div className="scroll-area">
-        <ThreeModelViewer />
+        <ContactMe />
       </div>
 
       {/* Content */}
       <div className="scroll-area bg-gray-400">
         {/* Add more content here to enable scrolling */}
+
         <ContactMe />
+        <ThreeModelViewer />
       </div>
     </div>
   );

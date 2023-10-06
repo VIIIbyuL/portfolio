@@ -19,7 +19,7 @@ function ThreeModelViewer() {
       1000,
     );
 
-    camera.position.set(0, 2, 10); // Adjusted camera position
+    camera.position.set(0, -1, 8); // Adjusted camera position
     const renderer = new THREE.WebGLRenderer();
     renderer.setSize(windowSize.width, windowSize.height);
 
@@ -73,9 +73,7 @@ function ThreeModelViewer() {
     };
   }, [windowSize]);
 
-  return (
-    <div ref={containerRef} style={{ width: "100vw", height: "100vh" }}></div>
-  );
+  return <div ref={containerRef}></div>;
 }
 
 export default ThreeModelViewer;
