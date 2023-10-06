@@ -1,7 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useCallback, useEffect } from "react";
 import Particles from "react-particles";
-import Navigation from "../components/Navigation";
 import Animation from "../components/Animation";
 import SkillsBar from "../components/SkillsBar";
 import AutoType from "../components/AutoType";
@@ -94,21 +93,24 @@ function Homepage() {
       },
     },
     detectRetina: true,
-    particlesContainer: ".particleContainer",
+    particlesContainer: {
+      // Set the height of the particles container here
+      height: "400px", // Change this value to your desired height
+    },
   };
 
   return (
-    <div style={{ minHeight: "100vh" }}>
+    <div>
       {/* Particle Effect */}
 
       {/* Navigation */}
-      <div className="particleContainer">
+      <div className="particlesContainer h-screen overflow-hidden">
         <Particles
           id="tsparticles"
           init={particlesInit}
           loaded={particlesLoaded}
           options={options}
-          className="fixed top-0 left-0 w-screen h-screen z-[-1]"
+          className="fixed top-0 left-0 w-screen h-screen overflow-hidden z-[-1]"
         />
         <Animation />
         <AutoType />
@@ -116,11 +118,11 @@ function Homepage() {
       </div>
 
       {/* Content */}
-      <div style={{ padding: "20px" }}>
+      <div className="bg-black h-screen">
         {/* Wrap the content you want to scroll in a div with specific height */}
-        <div style={{ maxHeight: "400px" }}>
+        
           <ContactMe />
-        </div>
+        
       </div>
     </div>
   );
