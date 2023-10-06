@@ -33,17 +33,7 @@ function Homepage() {
     },
     fpsLimit: 120,
     interactivity: {
-      events: {
-        onClick: {
-          enable: true,
-          mode: "push",
-        },
-        onHover: {
-          enable: true,
-          mode: "repulse",
-        },
-        resize: true,
-      },
+      detectsOn: "window",
       modes: {
         push: {
           quantity: 4,
@@ -94,8 +84,8 @@ function Homepage() {
     },
     detectRetina: true,
     particlesContainer: {
-      // Set the height of the particles container here
-      height: "400px", // Change this value to your desired height
+      // Set the height of the particles container here to match your desired section's height
+      height: "100vh", // Change this value to your desired height
     },
   };
 
@@ -117,12 +107,11 @@ function Homepage() {
         <SkillsBar />
       </div>
 
+      <div className="bg-gray-50 h-screen">yep</div>
       {/* Content */}
       <div className="bg-black h-screen">
         {/* Wrap the content you want to scroll in a div with specific height */}
-        
-          <ContactMe />
-        
+        <ContactMe />
       </div>
     </div>
   );
