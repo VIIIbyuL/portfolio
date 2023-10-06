@@ -134,7 +134,7 @@ function Contactpage() {
     retina_detect: true,
   };
   return (
-    <div className="relative h-full overflow-hidden">
+    <div className="relative">
       <Particles
         id="tsparticles"
         init={particlesInit}

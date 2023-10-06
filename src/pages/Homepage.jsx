@@ -6,6 +6,7 @@ import Animation from "../components/Animation";
 import SkillsBar from "../components/SkillsBar";
 import AutoType from "../components/AutoType";
 import { loadSlim } from "tsparticles-slim"; // Import the loadSlim function
+import ContactMe from "../components/ContactMe";
 
 function Homepage() {
   const particlesInit = useCallback(async (tsParticles) => {
@@ -93,28 +94,33 @@ function Homepage() {
       },
     },
     detectRetina: true,
+    particlesContainer: ".particleContainer",
   };
 
   return (
-    <div className="relative h-screen">
+    <div style={{ minHeight: "100vh" }}>
       {/* Particle Effect */}
-      <Particles
-        id="tsparticles"
-        init={particlesInit}
-        loaded={particlesLoaded}
-        options={options}
-        className="absolute top-0 left-0 w-full h-full z-0 pointer-events-none"
-      />
 
       {/* Navigation */}
-      <div className="relative z-10">
-        <Animation />  
+      <div className="particleContainer">
+        <Particles
+          id="tsparticles"
+          init={particlesInit}
+          loaded={particlesLoaded}
+          options={options}
+          className="fixed top-0 left-0 w-screen h-screen z-[-1]"
+        />
+        <Animation />
         <AutoType />
         <SkillsBar />
       </div>
 
-      <div className="h-screen">
-        making full test
+      {/* Content */}
+      <div style={{ padding: "20px" }}>
+        {/* Wrap the content you want to scroll in a div with specific height */}
+        <div style={{ maxHeight: "400px" }}>
+          <ContactMe />
+        </div>
       </div>
     </div>
   );

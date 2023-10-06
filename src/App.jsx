@@ -8,14 +8,7 @@ import Contactpage from "./pages/Contactpage";
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Homepage />} />
-        <Route path="/home" element={<Homepage />} />
-        <Route path="/about" element={<Aboutpage />} />
-        <Route path="/contact" element={<Contactpage />} />
-      </Routes>
-    </BrowserRouter>
+    <Homepage />
   );
 }
 export default App;
