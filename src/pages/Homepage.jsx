@@ -96,7 +96,7 @@ function Homepage() {
   };
 
   return (
-    <div className="relative h-full overflow-hidden">
+    <div className="relative h-screen">
       {/* Particle Effect */}
       <Particles
         id="tsparticles"
@@ -106,17 +106,15 @@ function Homepage() {
         className="absolute top-0 left-0 w-full h-full z-0 pointer-events-none"
       />
 
-      {/* Other components */}
+      {/* Navigation */}
       <div className="relative z-10">
-        <Navigation />
-        {/* <div>HOME PAGE COMPONENTS HERE</div> */}
-        <Animation />
-
-        {/* AutoType */}
+        <Animation />  
         <AutoType />
-
-        {/* <SkillsBar */}
         <SkillsBar />
+      </div>
+
+      <div className="h-screen">
+        making full test
       </div>
     </div>
   );
