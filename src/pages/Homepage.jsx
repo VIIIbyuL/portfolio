@@ -30,6 +30,16 @@ function Homepage() {
       color: {
         value: "#343434",
       },
+      fullScreen: {
+        enable: false,
+        zIndex: -1,
+      },
+      style: {
+        position: "absolute",
+        height: "100%",
+        top: "0",
+        left: "0",
+      },
     },
     fpsLimit: 120,
     interactivity: {
@@ -48,6 +58,7 @@ function Homepage() {
       color: {
         value: "#ffffff",
       },
+
       links: {
         color: "#ffffff",
         distance: 150,
@@ -90,26 +101,26 @@ function Homepage() {
   };
 
   return (
-    <div>
+    <div className="snap-proximity snap-y">
       {/* Particle Effect */}
 
       {/* Navigation */}
-      <div className="particlesContainer h-screen overflow-hidden">
+      <div className="h-screen snap-center ">
         <Particles
           id="tsparticles"
           init={particlesInit}
           loaded={particlesLoaded}
           options={options}
-          className="fixed top-0 left-0 w-screen h-screen overflow-hidden z-[-1]"
+          className=" z-[-1] h-screen w-screen"
         />
         <Animation />
         <AutoType />
         <SkillsBar />
       </div>
 
-      <div className="bg-gray-50 h-screen">yep</div>
+      <div className=" h-screen snap-center">yep</div>
       {/* Content */}
-      <div className="bg-black h-screen">
+      <div className="bg-black h-screen snap-center">
         {/* Wrap the content you want to scroll in a div with specific height */}
         <ContactMe />
       </div>

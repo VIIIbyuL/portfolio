@@ -7,8 +7,6 @@ import Aboutpage from "./pages/Aboutpage";
 import Contactpage from "./pages/Contactpage";
 
 function App() {
-  return (
-    <Homepage />
-  );
+  return <Homepage />;
 }
 export default App;
