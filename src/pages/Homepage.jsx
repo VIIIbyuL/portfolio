@@ -101,28 +101,25 @@ function Homepage() {
   };
 
   return (
-    <div className="snap-proximity snap-y">
+    <div className="scroll-container">
       {/* Particle Effect */}
 
       {/* Navigation */}
-      <div className="h-screen snap-center ">
-        <Particles
-          id="tsparticles"
-          init={particlesInit}
-          loaded={particlesLoaded}
-          options={options}
-          className=" z-[-1] h-screen w-screen"
-        />
-        <Animation />
-        <AutoType />
-        <SkillsBar />
+      <div className="scroll-area flex items-center justify-center flex-col">
+        
+          <Animation />
+          <AutoType />
+          <SkillsBar />
+        
       </div>
 
-      <div className=" h-screen snap-center">yep</div>
+      <div className="scroll-area">testing</div>
+
       {/* Content */}
-      <div className="bg-black h-screen snap-center">
-        {/* Wrap the content you want to scroll in a div with specific height */}
+      <div className="scroll-area">
+        {/* Add more content here to enable scrolling */}
         <ContactMe />
+
       </div>
     </div>
   );
