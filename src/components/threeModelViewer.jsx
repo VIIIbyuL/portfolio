@@ -40,7 +40,7 @@ function ThreeModelViewer() {
         requestAnimationFrame(animate);
 
         // Rotate the model around the y-axis
-        const model = scene.children[0];
+
         model.rotation.y += 0.01;
 
         renderer.render(scene, camera);
@@ -77,3 +77,4 @@ function ThreeModelViewer() {
 }
 
 export default ThreeModelViewer;
+

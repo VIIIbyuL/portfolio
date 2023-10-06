@@ -137,7 +137,6 @@ function Homepage() {
     retina_detect: true,
   };
 
-
   return (
     <div className="scroll-container">
       {/* Navigation */}
@@ -158,11 +157,11 @@ function Homepage() {
       </div>
 
       <div className="scroll-area">
-        <ContactMe />
+        <p className="text-white">some content</p>
       </div>
 
       {/* Content */}
-      <div className="scroll-area bg-gray-400">
+      <div className="scroll-area bg-black">
         {/* Add more content here to enable scrolling */}
 
         <ContactMe />

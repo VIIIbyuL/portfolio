@@ -4,7 +4,7 @@
 
 body {
   scroll-behavior: smooth;
-  overscroll-behavior: none;
+  overscroll-behavior:none ;
 }
 
 .scroll-container,
@@ -22,10 +22,6 @@ body {
 .scroll-area {
   scroll-snap-align: start;
 }
-
-
-
-
 
 .black-page {
   background: black;
