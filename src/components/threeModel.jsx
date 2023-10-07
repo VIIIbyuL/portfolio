@@ -10,6 +10,19 @@ function ThreeModelViewer() {
 
   useEffect(() => {
     let animationFrameId; // Declare a variable to store the animation frame ID
+    const textBlockContent = [
+      "Personal Portfolio Website",
+      "QRvoyant",
+      "notsosocial",
+      "Text Block 4 Content",
+    ];
+
+    const captionContent = [
+      "Designed using Reactjs, Tailwind, and Threejs",
+      "QR code generator and scanner with Typescript, React-native, SQLite offline, firebase online and userauth",
+      "Pseudo-social media site with tRPC, Nextjs, Prisma, Tailwind, NextAuth.js, Typescript",
+      "Caption 4 Content",
+    ];
 
     const scene = new THREE.Scene();
     sceneRef.current = scene;
@@ -51,11 +64,11 @@ function ThreeModelViewer() {
 
     for (let i = 0; i < 4; i++) {
       const textBlock = document.createElement("div");
-      textBlock.textContent = "Text Block " + (i + 1);
+      textBlock.textContent = textBlockContent[i];
       textBlock.style.position = "absolute";
       textBlock.style.color = "white";
       textBlock.style.fontSize = "24px";
-      textBlock.style.zIndex = "1";
+      textBlock.style.zIndex = "1"; 
       textBlock.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
       textBlock.style.padding = "10px";
 
@@ -68,20 +81,19 @@ function ThreeModelViewer() {
       textBlocks.push(textBlock);
       containerRef.current.appendChild(textBlock);
 
-      // Create a caption for each text block
       const caption = document.createElement("div");
-      caption.textContent = "Caption " + (i + 1);
+      caption.textContent = captionContent[i];
       caption.style.position = "absolute";
       caption.style.color = "white";
       caption.style.fontSize = "18px";
-      caption.style.zIndex = "1";
+      caption.style.zIndex = "2"; // Keep the same z-index for captions
       caption.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
       caption.style.padding = "5px";
       caption.style.top = positions[i].top
         ? parseInt(positions[i].top) + 40 + "px"
         : "";
       caption.style.bottom = positions[i].bottom
-        ? parseInt(positions[i].bottom) - 30 + "px"
+        ? parseInt(positions[i].bottom) - 50 + "px"
         : "";
       caption.style.left = positions[i].left
         ? parseInt(positions[i].left) + "px"
@@ -89,6 +101,9 @@ function ThreeModelViewer() {
       caption.style.right = positions[i].right
         ? parseInt(positions[i].right) + "px"
         : "";
+
+      // Limit the maximum width of captions
+      caption.style.maxWidth = "400px"; // Adjust the maximum width as needed
 
       textBlocks.push(caption);
       containerRef.current.appendChild(caption);
