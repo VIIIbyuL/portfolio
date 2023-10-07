@@ -1,27 +1,29 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import * as THREE from "three";
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader";
 
 function ThreeModelViewer() {
   const containerRef = useRef();
-  const [windowSize, setWindowSize] = useState({
-    width: window.innerWidth,
-    height: window.innerHeight,
-  });
+  const cameraRef = useRef();
+  const rendererRef = useRef();
+  const sceneRef = useRef(); // Add a reference for the scene
 
   useEffect(() => {
     // Create a scene, camera, and renderer
     const scene = new THREE.Scene();
+    sceneRef.current = scene; // Store the scene reference
     const camera = new THREE.PerspectiveCamera(
-      75, // Adjust the field of view (fov) to fit your needs
-      window.innerWidth / window.innerHeight, // Keep aspect ratio based on window size
+      75,
+      window.innerWidth / window.innerHeight,
       0.1,
       1000,
     );
+    camera.position.set(0, -1, 8);
+    cameraRef.current = camera; // Store the camera reference
 
-    camera.position.set(0, -1, 8); // Adjusted camera position
     const renderer = new THREE.WebGLRenderer();
-    renderer.setSize(windowSize.width, windowSize.height);
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    rendererRef.current = renderer; // Store the renderer reference
 
     // Append the renderer's DOM element to the component's container
     containerRef.current.appendChild(renderer.domElement);
@@ -34,47 +36,28 @@ function ThreeModelViewer() {
       // Add the loaded model to the scene
       scene.add(model);
 
-      // Set camera position and animate the scene as needed
-
+      // Animate the scene
       const animate = () => {
-        requestAnimationFrame(animate);
-
         // Rotate the model around the y-axis
-
         model.rotation.y += 0.01;
 
-        renderer.render(scene, camera);
+        // Render the scene
+        renderer.render(scene, cameraRef.current);
+
+        requestAnimationFrame(animate); // Continue the animation loop
       };
 
       animate();
     });
 
-    // Add OrbitControls to the scene
-
-    // Handle window resize
-    const handleResize = () => {
-      setWindowSize({
-        width: window.innerWidth,
-        height: window.innerHeight,
-      });
-
-      camera.aspect = windowSize.width / windowSize.height;
-      camera.updateProjectionMatrix();
-
-      renderer.setSize(windowSize.width, windowSize.height);
-    };
-
-    // Add event listener for window resize
-    window.addEventListener("resize", handleResize);
-
-    // Clean up the event listener when the component unmounts
+    // Cleanup function: Remove the scene and stop the animation when the component unmounts
     return () => {
-      window.removeEventListener("resize", handleResize);
+      sceneRef.current.remove(sceneRef.current);
+      rendererRef.current.dispose();
     };
-  }, [windowSize]);
+  }, []);
 
   return <div ref={containerRef}></div>;
 }
 
 export default ThreeModelViewer;
-

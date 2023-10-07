@@ -165,6 +165,7 @@ function Homepage() {
         {/* Add more content here to enable scrolling */}
 
         <ContactMe />
+
         <ThreeModelViewer />
       </div>
     </div>
