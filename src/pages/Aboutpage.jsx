@@ -3,6 +3,7 @@ import React from "react";
 import Navigation from "../components/Navigation";
 import GhibliText from "../components/GhibliText";
 import GhibliTier from "../components/GhibliTier";
+import ThreeModelViewer from "../components/threeModel";
 
 import { useState } from "react";
 
@@ -25,12 +26,7 @@ function Aboutpage() {
     <>
       <Navigation />
       <div id="aboutpage" style={style} className="h-screen">
-        {/* Ghibli */}
-        <GhibliText
-          className="ease-animation"
-          onComponentDone={handleComponentDone}
-        />
-        <GhibliTier className="ease-animation" componentDone={componentDone} />
+        <ThreeModelViewer />
       </div>
     </>
   );
