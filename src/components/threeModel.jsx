@@ -56,10 +56,10 @@ function ThreeModelViewer() {
 
     // Define the positions for the text blocks
     const positions = [
-      { top: "200px", left: "200px" },
-      { top: "200px", right: "200px" },
-      { bottom: "200px", left: "200px" },
-      { bottom: "200px", right: "200px" },
+      { top: "150px", left: "150px" },
+      { top: "150px", right: "150px" },
+      { bottom: "150px", left: "150px" },
+      { bottom: "150px", right: "150px" },
     ];
 
     for (let i = 0; i < 4; i++) {
