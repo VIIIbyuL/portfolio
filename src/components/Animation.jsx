@@ -8,7 +8,7 @@ function Animation() {
       <img
         src={imgMe}
         alt="not loading"
-        className="ease-animation w-32 h-32 md:w-56 md:h-56 shadow-lg shadow-gray-300 rounded-full"
+        className="ease-animation w-32 h-32 md:w-56 md:h-56 shadow-lg shadow-black rounded-full"
       />
     </div>
   );

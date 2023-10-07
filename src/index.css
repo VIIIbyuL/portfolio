@@ -7,6 +7,11 @@ body {
   overscroll-behavior: none;
 }
 
+#particle-container {
+  width: 100%;
+  height: 400px; /* Set the desired height */
+  position: relative;
+}
 .scroll-container,
 .scroll-area {
   max-width: 100vw;
@@ -24,8 +29,8 @@ body {
 }
 
 .black-page {
-  background: black;
-  color: #eeeeee;
+  background: white;
+  color: #000000;
   font-family: Georgia, "Times New Roman", Times, serif;
 }
 

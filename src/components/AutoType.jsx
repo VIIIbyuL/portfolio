@@ -6,6 +6,7 @@ const AutoType = () => {
   return (
     <div className="flex justify-center items-center  mt-20 p-10 font-extrabold text-xl md:text-5xl">
       <Typewriter
+        className = "shadow-lg shadow-black rounded-full"
         options={{
           strings: [
             "john kim.",

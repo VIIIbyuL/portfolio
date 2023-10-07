@@ -95,8 +95,12 @@ function Homepage() {
         },
       },
     },
+    fullScreen: {
+      enable: true,
+      zIndex: -1,
+    },
     interactivity: {
-      detect_on: "canvas",
+      detect_on: "div#particle-container",
       events: {
         onhover: {
           enable: false,
@@ -140,9 +144,11 @@ function Homepage() {
   return (
     <div className="scroll-container">
       {/* Navigation */}
-      <div className="scroll-area relative flex items-center justify-center flex-col">
+      <div className="scroll-area relative flex items-center justify-center flex-col h-screen w-screen">
         {/* Particle Effect */}
-        <div className="absolute top-0 left-0 w-full h-full z-[-1]">
+
+        {/* Wrap Particles component in a container div */}
+        <div id="particle-container" className="scroll-area h-screen w-screen">
           <Particles
             id="tsparticles"
             init={particlesInit}
@@ -156,17 +162,14 @@ function Homepage() {
         <SkillsBar />
       </div>
 
-      <div className="scroll-area">
-        <p className="text-white">some content</p>
+      <div className="scroll-area h-screen w-screen">
+        <ThreeModelViewer />
       </div>
 
       {/* Content */}
-      <div className="scroll-area bg-black">
+      <div className="scroll-area h-screen w-screen bg-black flex justify-center items-center">
         {/* Add more content here to enable scrolling */}
-
         <ContactMe />
-
-        <ThreeModelViewer />
       </div>
     </div>
   );
