@@ -9,19 +9,18 @@ function ThreeModelViewer() {
   const sceneRef = useRef();
 
   useEffect(() => {
-    let animationFrameId; // Declare a variable to store the animation frame ID
     const textBlockContent = [
-      "Personal Portfolio Website",
+      "Portfolio",
       "QRvoyant",
       "notsosocial",
-      "Text Block 4 Content",
+      "photoshare",
     ];
 
     const captionContent = [
       "Designed using Reactjs, Tailwind, and Threejs",
       "QR code generator and scanner with Typescript, React-native, SQLite offline, firebase online and userauth",
       "Pseudo-social media site with tRPC, Nextjs, Prisma, Tailwind, NextAuth.js, Typescript",
-      "Caption 4 Content",
+      "Photo sharing site built with MySQL DB, Flask, and HTML",
     ];
 
     const scene = new THREE.Scene();
@@ -41,7 +40,7 @@ function ThreeModelViewer() {
 
     // Create a header div
     const header = document.createElement("div");
-    header.textContent = "Some of my Projects";
+    header.textContent = "Projects";
     header.style.position = "absolute";
     header.style.color = "white";
     header.style.fontSize = "24px";
@@ -68,7 +67,7 @@ function ThreeModelViewer() {
       textBlock.style.position = "absolute";
       textBlock.style.color = "white";
       textBlock.style.fontSize = "24px";
-      textBlock.style.zIndex = "1"; 
+      textBlock.style.zIndex = "1";
       textBlock.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
       textBlock.style.padding = "10px";
 
@@ -117,7 +116,7 @@ function ThreeModelViewer() {
       const animate = () => {
         model.rotation.y += 0.01;
         renderer.render(scene, cameraRef.current);
-        animationFrameId = requestAnimationFrame(animate);
+        requestAnimationFrame(animate);
       };
 
       animate();

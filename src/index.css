@@ -9,7 +9,7 @@
 }
 
 .ease-animation {
-  animation-duration: 7s;
+  animation-duration: 3s;
   animation-name: ease-in-animation;
 }
 @keyframes ease-in-animation {

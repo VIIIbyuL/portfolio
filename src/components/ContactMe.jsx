@@ -10,10 +10,7 @@ function ContactMe() {
     <div className="h-screen w-screen flex items-center justify-center">
       <div className="bg-[#1A1A1A] w-7/12 p-5 rounded-lg text-center shadow-lg shadow-black">
         <div>
-          As a rising junior at Boston University, studying computer science,
-          I'm passionate about exploring the world of technology. I love coding
-          and solving complex challenges. Check out some of my projects on
-          GitHub and feel free to connect with me:
+        As a junior at Boston University, majoring in computer science, I have a strong interest in web development. I thoroughly enjoy coding and tackling complex challenges. You can find some of my web development projects on GitHub, and I'm always open to connecting with others in the field.
         </div>
 
         <ul className="flex flex-row mt-5  justify-evenly ">
