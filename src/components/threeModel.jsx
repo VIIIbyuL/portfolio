@@ -2,7 +2,7 @@ import { useEffect, useRef } from "react";
 import * as THREE from "three";
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader";
 
-import model from "../images/lost_programmer.glb";
+import model from "../images/lost_programmer/scene.gltf";
 
 function ThreeModelViewer() {
   const containerRef = useRef();
@@ -124,6 +124,10 @@ function ThreeModelViewer() {
         };
 
         animate();
+      },
+
+      (progress) => {
+        console.log("Loading model...", progress.loaded / progress.total);
       },
 
       (error) => {
