@@ -1,8 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import React from "react";
 import Navigation from "../components/Navigation";
-import GhibliText from "../components/GhibliText";
-import GhibliTier from "../components/GhibliTier";
 import ThreeModelViewer from "../components/threeModel";
 
 import { useState } from "react";
