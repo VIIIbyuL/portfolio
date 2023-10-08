@@ -109,18 +109,26 @@ function ThreeModelViewer() {
     }
 
     const loader = new GLTFLoader();
-    loader.load("../images/lost_programmer.glb", (gltf) => {
-      const model = gltf.scene;
-      scene.add(model);
+    loader.load(
+      "../images/lost_programmer.glb",
+      (gltf) => {
+        const model = gltf.scene;
+        scene.add(model);
 
-      const animate = () => {
-        model.rotation.y += 0.01;
-        renderer.render(scene, cameraRef.current);
-        requestAnimationFrame(animate);
-      };
+        const animate = () => {
+          model.rotation.y += 0.01;
+          renderer.render(scene, cameraRef.current);
+          requestAnimationFrame(animate);
+        };
 
-      animate();
-    });
+        animate();
+      },
+
+      (error) => {
+        console.error("Error loading the model:", error);
+        // Handle the error, e.g., display an error message to the user
+      },
+    );
   }, []);
 
   return <div ref={containerRef}></div>;
