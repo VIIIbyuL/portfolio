@@ -109,7 +109,7 @@ function ThreeModelViewer() {
     }
 
     const loader = new GLTFLoader();
-    loader.load("src/lost_programmer.glb", (gltf) => {
+    loader.load("../images/lost_programmer.glb", (gltf) => {
       const model = gltf.scene;
       scene.add(model);
 
