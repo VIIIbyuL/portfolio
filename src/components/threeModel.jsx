@@ -2,6 +2,8 @@ import { useEffect, useRef } from "react";
 import * as THREE from "three";
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader";
 
+import model from "../images/lost_programmer.glb";
+
 function ThreeModelViewer() {
   const containerRef = useRef();
   const cameraRef = useRef();
@@ -110,7 +112,7 @@ function ThreeModelViewer() {
 
     const loader = new GLTFLoader();
     loader.load(
-      "../images/lost_programmer.glb",
+      model,
       (gltf) => {
         const model = gltf.scene;
         scene.add(model);
